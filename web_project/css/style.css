@@ -1,0 +1,314 @@
+* {
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+    list-style: none;
+    box-sizing: border-box;
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&display=swap');
+
+body {
+    background: #F5F9F1;
+    font-family: 'Lato', sans-serif;
+    width: 100%;
+    height: 100vh;
+}
+
+/* Grids */
+
+.menu {
+    grid-area: navigate;
+}
+
+.burger {
+    display: none;
+}
+
+.header {
+    grid-area: head;
+}
+
+.sectionServices{
+    grid-area: services;
+    justify-content: center;
+}
+
+.sectionDifference{
+    grid-area: difference;
+}
+
+.sectionPortfolio{
+    grid-area: portfolio;
+}
+
+.sectionContact {
+    grid-area: contact;
+}
+
+footer{
+    grid-area: foot;
+    background-color: #001C8B;
+    padding: 10px;
+}
+
+/* Grids/ */
+
+h1{
+    font-weight: 700;
+    font-size: 70px;
+    text-transform: uppercase;
+    color: #001C8B;
+}
+
+h2 {
+    font-weight: 700;
+    font-size: 35px;
+    text-transform: uppercase;
+    color: #F6B28E;
+    padding: 20px;
+}
+
+.menu, footer{
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between;
+}
+
+.logo {
+    padding: 10px;
+}
+
+.menu ul {
+    display: flex;
+    flex-flow: row wrap;
+    align-items: center;
+}
+
+.menu ul li {
+    padding: 10px;
+}
+
+header {
+    height: 500px;
+    background-image: url("../images/clouds-background.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    margin-bottom: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center  ;
+}
+
+.sectionServices div {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+.sectionServices div img {
+    padding: 10px;
+}
+
+.sectionDifference article {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between;
+    padding: 40px;
+}
+
+.sectionDifference article div {
+    padding: 20px;
+}
+
+.randomText {
+    max-width: 50%;
+    align-self: center;
+}
+
+.sectionPortfolio article {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-around;
+}
+
+.port1, .port2, .port3 {
+    display: flex;
+    padding: 10px;
+}
+
+.port1 {
+    align-items: flex-start;
+}
+
+.port2 {
+    align-items: flex-end;
+}
+
+.port3 {
+    flex-flow: column wrap;
+    justify-content: space-around;
+}
+
+.port3 input {
+    margin: 10px;
+}
+
+.sectionContact {
+    display: flex;
+    flex-flow: column nowrap;
+}
+
+.sectionContact form {
+    align-self: center;
+}
+
+form input, input {
+    border: 1px solid #001C8B;
+    background-color: #F5F9F1;
+    margin: 10px;
+    padding: 10px;
+    height: 20px;
+}
+
+form {
+    padding: 10px;
+}
+
+
+form textarea {
+    border: 1px solid #001C8B;
+    background-color: #F5F9F1;
+    margin: 10px 0px;
+    padding: 10px;
+}
+
+.button {
+    height: 50px;
+}
+
+footer div {
+    align-self: center;
+}
+
+footer div p {
+    color: #F5F9F1;
+}
+
+/* Desktop */
+
+@media (min-widdth: 1024px) {
+
+    body {
+        display: grid;
+        grid-template-areas: 
+        "navigate"
+        "head"
+        "services"
+        "difference"
+        "portfolio"
+        "contact"
+        "foot";
+        grid-template-columns: 100%;
+        grid-template-rows: auto;
+    }
+}
+
+/* Tablet */
+
+@media (min-width: 512px) and (max-width: 1023px) {
+
+    .burger {
+        display: flex;
+        padding: 10px;
+    }
+
+    .normalNav li, .normalNav {
+        display: none;
+        position: absolute;
+    }
+
+    h1 {
+        font-size: 50px;
+    }
+
+    h2 {
+        font-size: 28px;
+        padding: 10px;
+    }
+
+    body {
+        display: grid;
+        grid-template-areas: 
+        "navigate"
+        "head"
+        "services"
+        "difference"
+        "portfolio"
+        "contact"
+        "foot";
+        grid-template-columns: 100%;
+        grid-template-rows: auto;
+    }
+
+    header  {
+        height: 300px;
+    }
+
+    .testImage {
+        max-width: 300px;
+    }
+
+    .randomText {
+        max-width: 100%;
+    }
+}
+
+/* Phone */
+
+@media (max-width: 511px) {
+
+    body {
+        display: grid;
+        grid-template-areas: 
+        "navigate"
+        "head"
+        "services"
+        "difference"
+        "portfolio"
+        "contact"
+        "foot";
+        grid-template-columns: 100%;
+        grid-template-rows: auto;
+    }
+
+    h1 {
+        font-size: 35px;
+    }
+
+    h2 {
+        font-size: 20px;
+    }
+
+    .burger {
+        display: flex;
+        padding: 10px;
+    }
+
+    .normalNav li, .normalNav {
+        display: none;
+        position: absolute;
+    }
+
+    header {
+        height: 200px;
+    }
+
+    .testImage {
+        max-width: 250px;
+    }
+
+    .randomText {
+        max-width: 100%;
+    }
+}
